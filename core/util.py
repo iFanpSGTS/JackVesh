@@ -350,7 +350,7 @@ class JVInterpreter:
             if (":" in name):
                 name = name.split(":")[0].strip()
                 
-            for section in ["variables", "objects", "functions"]:
+            for section in ["variables", "objects"]:
                 if (self.get_entity(section, name) != None):
                     print("Definisi ulang 'variable' 'object' 'function'")
                     
