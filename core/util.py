@@ -82,8 +82,7 @@ class JVScope:
     def __init__(self):
         self.entities = {
             "variables": {},
-            "objects": {},
-            "functions": {}
+            "objects": {}
         }
 
         self.checker = JVEndCheck()
