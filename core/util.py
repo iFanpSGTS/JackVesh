@@ -320,11 +320,17 @@ class JVInterpreter:
             try:
                 condition = keyword_ext("ketika ", line)
             except AttributeError:
-                print("")
+                print("Isi dari statement-ketika harus ada ['(' dan ')']")
 
-            wh = WHILE(condition)
-            self.stack.push(wh)
-            return self.null()
+            if "inf" in condition:
+                condition = "1 < 100"
+                wh = WHILE(condition)
+                self.stack.push(wh)
+                return self.null()
+            else:
+                wh = WHILE(condition)
+                self.stack.push(wh)
+                return self.null()
         
         if (keyword == "untuk"):
             try:
