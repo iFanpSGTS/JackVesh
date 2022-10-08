@@ -1,6 +1,0 @@
-'ini adalah contoh whileloop yang benar  (angka dlu baru huruf), jika 2 2 ny huruf (variable huruf pertama di dahulukan)'
-ini a = 0
-ketika (100 > a)
-    katakan a
-    a++
-henti

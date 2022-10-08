@@ -1,7 +1,0 @@
-'(if else) masih nge bug kalo digabung sama forloop atau whileloop'
-jika (10 == 15)
-    katakan `iya`
-henti
-kecuali
-    katakan `tidak`
-henti
