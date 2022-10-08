@@ -1,11 +1,11 @@
-from TKPos import Position, Token;import string;from ErrorHandler import *
+from core.TKPos import Position, Token;import string;from core.ErrorHandler import *
 
 DIGITS = '0123456789'
 LETTERS = string.ascii_letters
 LETTERS_DIGITS = LETTERS + DIGITS
 
 KEYWORDS = [
-  'INI',
+  'VAR',
   'DAN',
   'ATAU',
   'TIDAK',
@@ -34,7 +34,7 @@ MINUS    	= 'MINUS'
 MUL      	= 'MUL'
 DIV      	= 'DIV'
 POW				= 'POW'
-EQ					= 'EQ'
+EQUAL					= 'EQUAL'
 LPAREN   	= 'LPAREN'
 RPAREN   	= 'RPAREN'
 LSQUARE    = 'LSQUARE'
@@ -203,7 +203,7 @@ class Lexer:
     return None, ExpectedCharError(pos_start, self.pos, "'=' (after '!')")
   
   def make_equals(self):
-    tok_type = EQ
+    tok_type = EQUAL
     pos_start = self.pos.copy()
     self.advance()
 
