@@ -2,9 +2,9 @@
 this is a new programming language that i made just for education
 
 # TODO
-- [50/100] Rewrite all code
+- [ ] Rewrite all code
 - [X] ErrorHandler
-- [X] LOGS
+- [X] Error LOGS ID/EN, for now its EN Logs
 
 # Information About This Project
 - Why i rewrite all the code?
