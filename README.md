@@ -2,9 +2,9 @@
 this is a new programming language that i made just for education
 
 # TODO
-- Rewrite all code [ ]
-- ErrorHandler [ ]
-- LOGS [ ]
+- Rewrite all code [50/100]
+- ErrorHandler [x]
+- LOGS [x]
 
 # Information About This Project
 - Why i rewrite all the code?
