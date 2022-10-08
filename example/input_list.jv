@@ -1,0 +1,7 @@
+VAR list = []
+
+VAR input = INPUT()
+
+MASUKKAN(list, input)
+
+SHOW(list)

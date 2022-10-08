@@ -1,0 +1,4 @@
+# -> = NEWLINE 
+FUNC tambahString(string) -> "Hai " + string
+
+SHOW(tambahString("Andi"))

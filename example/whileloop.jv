@@ -1,0 +1,3 @@
+LOOP2 TRUE TERUS
+    SHOW("A")
+TUTUP

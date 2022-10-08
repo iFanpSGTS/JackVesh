@@ -1,0 +1,5 @@
+JIKA(2 < 4) TERUS
+    SHOW("IYA")
+KECUALI
+    SHOW("TIDAK")
+TUTUP

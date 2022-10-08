@@ -1,0 +1,3 @@
+LOOP i = 0 UNTUK 100 TERUS
+    SHOW(i)
+TUTUP
