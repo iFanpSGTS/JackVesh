@@ -1134,7 +1134,6 @@ class Number(Value):
 Number.null = Number(0)
 Number.false = Number(0)
 Number.true = Number(1)
-Number.math_PI = Number(math.pi)
 
 class String(Value):
   def __init__(self, value):
@@ -1784,8 +1783,7 @@ global_symbol_table = SymbolTable()
 global_symbol_table.set("NULL", Number.null)
 global_symbol_table.set("FALSE", Number.false)
 global_symbol_table.set("TRUE", Number.true)
-global_symbol_table.set("MATH_PI", Number.math_PI)
-global_symbol_table.set("KATAKAN", BuiltInFunction.print)
+global_symbol_table.set("SHOW", BuiltInFunction.print)
 global_symbol_table.set("PRINT_RET", BuiltInFunction.print_ret)
 global_symbol_table.set("INPUT", BuiltInFunction.input)
 global_symbol_table.set("INPUT_INT", BuiltInFunction.input_int)
