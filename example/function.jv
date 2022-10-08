@@ -1,4 +1,4 @@
-# -> = NEWLINE 
+# -> = Same as lambda but in here only can be used with function
 FUNC tambahString(string) -> "Hai " + string
 
 SHOW(tambahString("Andi"))
