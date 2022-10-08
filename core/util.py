@@ -1134,6 +1134,7 @@ class Number(Value):
 Number.null = Number(0)
 Number.false = Number(0)
 Number.true = Number(1)
+Number.math_PI = Number(math.pi)
 
 class String(Value):
   def __init__(self, value):
@@ -1151,9 +1152,21 @@ class String(Value):
       return String(self.value * other.value).set_context(self.context), None
     else:
       return None, Value.illegal_operation(self, other)
+    
+  def get_comparison_eq(self, other):
+    if isinstance(other, String):
+      return String(self.value == other.value).set_context(self.context), None
+    else:
+      return None, Value.illegal_operation(self, other)
 
+  def get_comparison_ne(self, other):
+    if isinstance(other, String):
+      return String(self.value != other.value).set_context(self.context), None
+    else:
+      return None, Value.illegal_operation(self, other)
+  
   def is_true(self):
-    return len(self.value) > 0
+    return self.value != 0
 
   def copy(self):
     copy = String(self.value)
@@ -1493,7 +1506,6 @@ class BuiltInFunction(BaseFunction):
   execute_run.arg_names = ["fn"]
 
 BuiltInFunction.print       = BuiltInFunction("print")
-BuiltInFunction.print_ret   = BuiltInFunction("print_ret")
 BuiltInFunction.input       = BuiltInFunction("input")
 BuiltInFunction.input_int   = BuiltInFunction("input_int")
 BuiltInFunction.clear       = BuiltInFunction("clear")
@@ -1783,8 +1795,8 @@ global_symbol_table = SymbolTable()
 global_symbol_table.set("NULL", Number.null)
 global_symbol_table.set("FALSE", Number.false)
 global_symbol_table.set("TRUE", Number.true)
+global_symbol_table.set("MATH_PI", Number.math_PI)
 global_symbol_table.set("SHOW", BuiltInFunction.print)
-global_symbol_table.set("PRINT_RET", BuiltInFunction.print_ret)
 global_symbol_table.set("INPUT", BuiltInFunction.input)
 global_symbol_table.set("INPUT_INT", BuiltInFunction.input_int)
 global_symbol_table.set("CLEAR", BuiltInFunction.clear)
