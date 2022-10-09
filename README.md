@@ -5,6 +5,8 @@ this is a new programming language that i made just for education
 - [X] Rewrite all code
 - [X] ErrorHandler
 - [X] Error LOGS ID/EN, for now its EN Logs
+- [ ] ID Error Logs
+- [ ] Sleep,Pause <-- Ext for Loop(for, while)
 
 # Information About This Project
 - Why i rewrite all the code?
