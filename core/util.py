@@ -1350,8 +1350,14 @@ class BuiltInFunction(BaseFunction):
     return RTResult().success(String(str(exec_ctx.symbol_table.get('value'))))
   execute_print_ret.arg_names = ['value']
   
-  def execute_input(self, exec_ctx):
-    text = input()
+def execute_input(self, exec_ctx):
+    while True:
+      text = input()
+      if text != "":
+        text_str = str(text)
+        break
+      else:
+        print(f"'{text}' must be str not NoneType Object!")
     return RTResult().success(String(text))
   execute_input.arg_names = []
 
