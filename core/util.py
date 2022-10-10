@@ -1441,28 +1441,6 @@ def execute_input(self, exec_ctx):
     return RTResult().success(element)
   execute_pop.arg_names = ["list", "index"]
 
-  def execute_extend(self, exec_ctx):
-    listA = exec_ctx.symbol_table.get("listA")
-    listB = exec_ctx.symbol_table.get("listB")
-
-    if not isinstance(listA, List):
-      return RTResult().failure(RTError(
-        self.pos_start, self.pos_end,
-        "First argument must be list",
-        exec_ctx
-      ))
-
-    if not isinstance(listB, List):
-      return RTResult().failure(RTError(
-        self.pos_start, self.pos_end,
-        "Second argument must be list",
-        exec_ctx
-      ))
-
-    listA.elements.extend(listB.elements)
-    return RTResult().success(Number.null)
-  execute_extend.arg_names = ["listA", "listB"]
-
   def execute_len(self, exec_ctx):
     list_ = exec_ctx.symbol_table.get("list")
 
@@ -1521,7 +1499,6 @@ BuiltInFunction.is_list     = BuiltInFunction("is_list")
 BuiltInFunction.is_function = BuiltInFunction("is_function")
 BuiltInFunction.append      = BuiltInFunction("append")
 BuiltInFunction.pop         = BuiltInFunction("pop")
-BuiltInFunction.extend      = BuiltInFunction("extend")
 BuiltInFunction.len					= BuiltInFunction("len")
 BuiltInFunction.run					= BuiltInFunction("run")
 
@@ -1813,7 +1790,6 @@ global_symbol_table.set("IS_LIST", BuiltInFunction.is_list)
 global_symbol_table.set("IS_FUN", BuiltInFunction.is_function)
 global_symbol_table.set("MASUKKAN", BuiltInFunction.append)
 global_symbol_table.set("KELUARKAN", BuiltInFunction.pop)
-global_symbol_table.set("PERPANJANG", BuiltInFunction.extend)
 global_symbol_table.set("UKUR", BuiltInFunction.len)
 global_symbol_table.set("JALAN", BuiltInFunction.run)
 
