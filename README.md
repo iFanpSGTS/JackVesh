@@ -1,3 +1,7 @@
+# Discontinued
+- I & my friend is very busy on real life, we cannot always in front of a computer , we have something to do.
+- This project will discontinued for a while, idk when i resume this project again. Sorry :(
+
 # JackVesh
 this is a new programming language that i made just for education
 
