@@ -16,6 +16,16 @@ def run_intepreter(files):
                     else:
                         print(repr(result))
 
+def run_from_gui(valueN, value):
+    result, error = Tokenrun(valueN, value)
+    if error:
+        print(error.as_string())
+    if result:
+        if len(result.elements) == 1:
+            print(repr(result.elements[0]))
+        else:
+            print(repr(result))
+                        
 if __name__ == "__main__":
     try:
         run_intepreter(sys.argv[1])
